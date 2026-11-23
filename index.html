@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="Code starters, visual packs, and practical playbooks from @kairo.builds.">
+  <title>@kairo.builds — Digital Creator Hub &amp; Storefront</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: {
+      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+      colors: { obsidian: '#090b10', surface: '#11151f', surfaceHover: '#171c29', borderSubtle: 'rgba(148,163,184,.14)' },
+      boxShadow: { glow: '0 0 40px -10px rgba(56,189,248,.25)', card: '0 10px 30px -12px rgba(0,0,0,.65)' }
+    } } };
+  </script>
+  <style>
+    body { background:#090b10; color:#f1f5f9; font-family:Inter,system-ui,sans-serif; overflow-x:hidden }
+    .bg-grid { background-size:40px 40px; background-image:linear-gradient(to right,rgba(148,163,184,.045) 1px,transparent 1px),linear-gradient(to bottom,rgba(148,163,184,.045) 1px,transparent 1px) }
+    @keyframes modalPop { from {opacity:0;transform:translateY(10px) scale(.98)} to {opacity:1;transform:translateY(0) scale(1)} }
+    .modal-animate { animation:modalPop .2s cubic-bezier(.16,1,.3,1) }
+    :focus-visible { outline:2px solid #38bdf8; outline-offset:3px }
+  </style>
+</head>
+<body class="bg-grid min-h-screen flex flex-col selection:bg-sky-400/20 selection:text-sky-300">
+  <div aria-hidden="true" class="pointer-events-none fixed inset-x-0 top-0 h-96 bg-gradient-to-b from-sky-500/10 via-indigo-500/5 to-transparent blur-2xl"></div>
+  <header class="relative z-10 sticky top-0 border-b border-borderSubtle bg-obsidian/80 backdrop-blur-md">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <a href="#top" class="flex items-center gap-2.5 group">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-indigo-500 text-slate-950 font-mono font-bold shadow-sm group-hover:scale-105 transition-transform">K</span>
+        <span class="font-mono text-sm font-semibold tracking-tight">@kairo.builds</span>
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-mono bg-emerald-500/10 text-emerald-300 border border-emerald-500/20"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>SHIPPING WEEKLY</span>
+      </a>
+      <nav aria-label="Primary sections" class="flex items-center gap-3 sm:gap-6 text-sm font-medium text-slate-300">
+        <a href="#links" class="hover:text-white">Links</a><a href="#products" class="hover:text-white">Products</a>
+        <a href="#updates" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white border border-borderSubtle text-xs sm:text-sm">Get Updates</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top" class="relative z-10 flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-20">
+    <section aria-labelledby="hero-heading" class="text-center max-w-3xl mx-auto space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-borderSubtle text-xs sm:text-sm font-mono text-sky-300">
+        <svg class="w-4 h-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <span>@kairo.builds • Independent Builder &amp; Digital Studio</span>
+      </div>
+      <h1 id="hero-heading" class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">Sharp code starters, visual packs &amp; playbooks built to ship faster.</h1>
+      <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">No fluff or bloated courses—just battle-tested templates, motion &amp; audio assets, and field notes from building software, shipping on the road, and turning ideas into digital products.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
+        <a href="#products" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-400 hover:from-sky-300 hover:to-indigo-300 text-slate-950 font-semibold shadow-glow">Browse Digital Products <span aria-hidden="true">↓</span></a>
+        <a href="#updates" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-surface hover:bg-surfaceHover border border-borderSubtle font-semibold"><span class="text-sky-400" aria-hidden="true">♧</span> Get Updates</a>
+      </div>
+    </section>
+    <section id="links" aria-labelledby="links-heading" class="space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2"><div><p class="font-mono text-xs uppercase tracking-widest text-sky-400">Quick Access</p><h2 id="links-heading" class="text-2xl sm:text-3xl font-bold tracking-tight">Links &amp; Channels</h2></div><p class="text-xs sm:text-sm text-slate-400">Direct hubs for code, instant downloads, build logs, and community.</p></div>
+      <div id="links-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+    </section>
+    <section id="products" aria-labelledby="products-heading" class="space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4"><div><p class="font-mono text-xs uppercase tracking-widest text-indigo-400">Digital Storefront</p><h2 id="products-heading" class="text-2xl sm:text-3xl font-bold tracking-tight">Digital Products</h2><p class="text-sm text-slate-400 mt-1">Instant digital delivery • Lifetime updates on starter kits &amp; playbooks.</p></div>
+        <div role="tablist" aria-label="Filter digital products by category" id="filter-tabs" class="flex flex-wrap gap-1.5 p-1 rounded-xl bg-surface border border-borderSubtle"></div>
+      </div>
+      <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+    <section id="updates" aria-labelledby="updates-heading" class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-surface via-[#131926] to-surface border border-borderSubtle p-6 sm:p-10 shadow-card">
+      <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-20 w-64 h-64 rounded-full bg-sky-500/10 blur-3xl"></div>
+      <div class="relative z-10 max-w-2xl mx-auto text-center space-y-4">
+        <span class="inline-block font-mono text-xs uppercase tracking-widest text-sky-400 bg-sky-400/10 border border-sky-400/20 px-3 py-1 rounded-full">Drop Alerts &amp; Build Notes</span>
+        <h2 id="updates-heading" class="text-2xl sm:text-3xl font-bold tracking-tight">Be first when new kits &amp; drops go live.</h2>
+        <p class="text-sm sm:text-base text-slate-400">Occasional dispatches with new code templates, asset packs, freebies, and hackathon/travel notes. Direct inquiries: <a href="mailto:tfreely98765@gmail.com" class="text-sky-300 hover:underline font-mono text-xs sm:text-sm">tfreely98765@gmail.com</a>.</p>
+        <form id="notify-form" class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 max-w-lg mx-auto" novalidate>
+          <label for="email-input" class="sr-only">Email address</label><input id="email-input" type="email" autocomplete="email" required placeholder="you@example.com" class="flex-1 px-4 py-3 rounded-xl bg-obsidian/90 border border-borderSubtle text-white placeholder-slate-500 text-sm focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20">
+          <button type="submit" class="px-6 py-3 rounded-xl bg-sky-400 hover:bg-sky-300 text-slate-950 font-semibold text-sm shrink-0">Notify Me</button>
+        </form>
+        <p class="text-xs text-slate-500">This demo form does not store or send email addresses yet.</p>
+        <div id="form-feedback" role="status" aria-live="polite" class="hidden max-w-lg mx-auto rounded-xl px-4 py-3 text-sm font-medium border"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="relative z-10 border-t border-borderSubtle bg-obsidian/90 mt-8"><div class="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400"><div class="flex flex-wrap items-center gap-2"><span class="font-mono font-semibold text-slate-200">@kairo.builds</span><span>•</span><a href="mailto:tfreely98765@gmail.com" class="font-mono text-xs text-sky-300 hover:underline">tfreely98765@gmail.com</a></div><div class="flex items-center gap-5"><a href="#links" class="hover:text-white">Links</a><a href="#products" class="hover:text-white">Products</a><a href="#updates" class="hover:text-white">Updates</a><span class="font-mono text-xs text-slate-500">&copy; <span id="year"></span></span></div></div></footer>
+  <div id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+    <div id="modal-backdrop" class="fixed inset-0" aria-hidden="true"></div>
+    <div class="relative z-10 w-full max-w-xl rounded-2xl bg-surface border border-borderSubtle shadow-2xl overflow-hidden modal-animate">
+      <div class="flex items-start justify-between gap-4 p-5 sm:p-6 border-b border-borderSubtle"><div><div class="flex items-center gap-2 mb-2"><span id="modal-category" class="font-mono text-[11px] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-sky-400/10 text-sky-300 border border-sky-400/20"></span><span id="modal-format" class="font-mono text-[11px] text-slate-400"></span></div><h3 id="modal-title" class="text-xl sm:text-2xl font-bold"></h3></div><button id="close-modal-btn" type="button" aria-label="Close modal" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">✕</button></div>
+      <div class="p-5 sm:p-6 space-y-5 max-h-[75vh] overflow-y-auto"><div id="modal-preview-box" class="rounded-xl bg-obsidian border border-borderSubtle p-4 font-mono text-xs text-slate-300 overflow-x-auto"></div><p id="modal-description" class="text-sm sm:text-base text-slate-300 leading-relaxed"></p><div class="space-y-2"><h4 class="font-mono text-xs uppercase tracking-wider text-slate-400">What's Included</h4><ul id="modal-features" class="space-y-2 text-sm text-slate-200"></ul></div></div>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-5 sm:p-6 border-t border-borderSubtle bg-obsidian/60"><div class="flex items-baseline gap-2"><span class="text-xs font-mono uppercase text-slate-400">Price</span><span id="modal-price" class="text-2xl font-extrabold font-mono"></span></div><div class="flex flex-wrap items-center gap-2.5"><a id="modal-paypal-link" href="https://www.paypal.com/ncp/payment/tfreely98765@gmail.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-slate-800 text-amber-300 font-semibold text-xs sm:text-sm border border-amber-400/30">PayPal</a><a id="modal-external-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-400 text-slate-950 font-semibold text-sm">Gumroad Checkout <span aria-hidden="true">↗</span></a></div></div>
+    </div>
+  </div>
+  <script>
+    const PAYPAL_CHECKOUT_URL = 'https://www.paypal.com/ncp/payment/tfreely98765@gmail.com';
+    const GUMROAD_STORE_URL = 'https://gumroad.com';
+    function toGumroadCheckoutUrl(slug) {
+      if (!slug) return `${GUMROAD_STORE_URL}?wanted=true`;
+      const base = slug.startsWith('http') ? slug : `${GUMROAD_STORE_URL}/l/${slug.replace(/^\/+|\/+$/g, '')}`;
+      return `${base}${base.includes('?') ? '&' : '?'}wanted=true`;
+    }
+    const LINKS_DATA = [
+      { title:'Portfolio & GitHub', subtitle:'Open-source tools, boilerplates & live shipping logs', badge:'CODE', url:'https://github.com', color:'sky' },
+      { title:'Gumroad Storefront & Checkout', subtitle:'Instant digital checkout for all drops', badge:'GUMROAD', url:toGumroadCheckoutUrl('YOUR-STORE-BUNDLE'), color:'emerald' },
+      { title:'Pay Direct via PayPal', subtitle:'Send payments & custom orders', badge:'PAYPAL', url:PAYPAL_CHECKOUT_URL, color:'amber' },
+      { title:'Video & Clips Channel', subtitle:'Breakdowns, build timelapses & travel dispatches', badge:'VIDEO', url:'https://youtube.com', color:'rose' },
+      { title:'Community & Socials', subtitle:'Build in public threads, meetups & DMs', badge:'SOCIAL', url:'https://x.com', color:'indigo' }
+    ];
+    const CATEGORIES = [{id:'all',label:'All'},{id:'code',label:'Code & Templates'},{id:'media',label:'Media & Visuals'},{id:'guides',label:'Guides'}];
+    const PRODUCTS_DATA = [
+      {id:'shipfast-starter-kit',title:'Hackathon & SaaS Starter Kit',category:'code',categoryLabel:'Code & Templates',price:'$29',format:'ZIP + Git Repo',description:'Clean, modular web starter built for rapid prototyping and weekend launches. Skip repetitive setup and jump straight into your core product logic.',features:['Responsive landing, auth-ready layout & dashboard shell','Clean component primitives & token styling system','Environment config template & deployment checklist'],previewType:'code',previewContent:'// Quick-start webhook route example\nexport async function handleShipEvent(payload) {\n  const verified = await verifySignature(payload);\n  if (!verified) return Response.json({ ok: false }, { status: 401 });\n  return Response.json({ status: \'queued\' });\n}',buyUrl:toGumroadCheckoutUrl('code-starter-kit-4918')},
+      {id:'kinetic-motion-audio-pack',title:'Kinetic UI & Creator Visual Pack',category:'media',categoryLabel:'Media & Visuals',price:'$19',format:'4K Loops + WAV/MP3',description:'Curated dark-mode abstract loops, UI callout overlays, and crisp ambient/tech sound effects designed for product demos, reels, and launch videos.',features:['24 seamless dark abstract motion loops (4K / 60fps)','35 tactile UI clicks, transitions & sub-bass risers','Royalty-free license for personal & commercial content'],previewType:'visual',previewContent:{label:'VISUAL & AUDIO PACK PREVIEW',pills:['4K Seamless Loops','Lossless SFX Stems','Drag & Drop Ready'],caption:'High-contrast dark motion backgrounds + crisp UI foley for product showcases.'},buyUrl:toGumroadCheckoutUrl('neon-synth-pack-8492')},
+      {id:'solo-builder-playbook',title:'48-Hour Builder & Bounty Playbook',category:'guides',categoryLabel:'Guides',price:'$14',format:'PDF + Notion Checklist',description:'A practical field guide to scoping weekend builds, pitching live demos, stacking sponsor bounties, and shipping digital assets consistently.',features:['Hour-by-hour 48-hour sprint & demo scoping framework','Sponsor pitch scripts & bounty checklist','Digital product launch & pricing matrix'],previewType:'outline',previewContent:['01 // Scope One Core Loop (Cut Scope Ruthlessly)','02 // Build a Demo That Survives Live Wi-Fi Drops','03 // Package & Publish Your First $10–$30 Asset'],buyUrl:toGumroadCheckoutUrl('ai-prompt-vault-3107')},
+      {id:'automation-workflows-bundle',title:'Creator Ops & Automation Scripts',category:'code',categoryLabel:'Code & Templates',price:'$24',format:'Node / Python Scripts',description:'Lightweight scripts to automate changelog notes, social clip queues, file renaming, and release packaging so you spend more time creating.',features:['Automated release notes & changelog generator','Batch asset optimizer & folder organizer scripts','Clear setup instructions for macOS, Linux & Windows'],previewType:'code',previewContent:'# Batch-package release artifacts with checksums\nnpx tsx scripts/package-release.ts --version v1.4.0 --checksums',buyUrl:toGumroadCheckoutUrl('ship-scripts-kit-7341')},
+      {id:'nomad-creator-kit-guide',title:'Travel & Build Field Notes',category:'guides',categoryLabel:'Guides',price:'$9',format:'Markdown + PDF Guide',description:'A compact handbook on keeping your coding velocity high while traveling—covering lightweight gear setups, offline backups, and low-overhead routines.',features:['Lean carry-on dev & content gear checklist','Offline-first workflow & backup habits on the road','Weekly shipping rhythm for independent creators'],previewType:'outline',previewContent:['Chapter 1 // Pack Light, Stay Mobile, Keep Power Ready','Chapter 2 // Offline Resilience When Connectivity Drops','Chapter 3 // Funding Travel Through Small Shipped Wins'],buyUrl:toGumroadCheckoutUrl('nomad-field-notes-5824')},
+      {id:'cyber-grid-overlays',title:'HUD & Grid Overlay Bundle',category:'media',categoryLabel:'Media & Visuals',price:'$15',format:'PNG + SVG + MOV',description:'Transparent HUD frames, reticle markers, and technical grid overlays to give screen recordings and tutorials a studio edge.',features:['50+ crisp vector SVG & transparent PNG overlays','Animated scanline & reticle accents','Works in DaVinci Resolve, Premiere, CapCut & Figma'],previewType:'visual',previewContent:{label:'OVERLAY & HUD ASSET SPEC',pills:['Transparent Alpha','Scalable SVG','Dark UI Native'],caption:'Clean technical frames and callout markers that highlight UI actions without clutter.'},buyUrl:toGumroadCheckoutUrl('cinematic-lut-bundle-6259')}
+    ];
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+    let activeCategory = 'all';
+    function renderLinks() {
+      document.getElementById('links-grid').innerHTML = LINKS_DATA.map(link => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-surface hover:bg-surfaceHover border border-borderSubtle transition-all shadow-card hover:-translate-y-0.5"><div class="min-w-0"><div class="flex items-center gap-2"><h3 class="font-semibold text-white group-hover:text-sky-300 truncate">${escapeHtml(link.title)}</h3><span class="font-mono text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-borderSubtle">${escapeHtml(link.badge)}</span></div><p class="text-xs sm:text-sm text-slate-400 truncate mt-1">${escapeHtml(link.subtitle)}</p></div><span class="text-slate-400 group-hover:text-white" aria-hidden="true">↗</span></a>`).join('');
+    }
+    function renderFilterTabs() {
+      const tabs = document.getElementById('filter-tabs');
+      tabs.innerHTML = CATEGORIES.map(cat => `<button type="button" role="tab" aria-selected="${cat.id === activeCategory}" data-category="${cat.id}" class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${cat.id === activeCategory ? 'bg-sky-400 text-slate-950 font-semibold' : 'text-slate-300 hover:text-white hover:bg-slate-800/70'}">${escapeHtml(cat.label)}</button>`).join('');
+      tabs.querySelectorAll('button').forEach(button => button.addEventListener('click', () => { activeCategory = button.dataset.category; renderFilterTabs(); renderProducts(); }));
+    }
+    function renderProducts() {
+      const grid = document.getElementById('products-grid');
+      const items = activeCategory === 'all' ? PRODUCTS_DATA : PRODUCTS_DATA.filter(product => product.category === activeCategory);
+      grid.innerHTML = items.map(product => `<article class="group flex flex-col justify-between rounded-2xl bg-surface hover:bg-surfaceHover border border-borderSubtle hover:border-sky-400/35 p-5 sm:p-6 shadow-card transition-all"><div class="space-y-4"><div class="flex items-center justify-between gap-2"><span class="font-mono text-[11px] px-2.5 py-1 rounded-full bg-slate-800 text-sky-300 border border-borderSubtle">${escapeHtml(product.categoryLabel)}</span><span class="font-mono text-sm font-bold px-3 py-1 rounded-lg bg-sky-400/10 text-sky-300 border border-sky-400/25">${escapeHtml(product.price)}</span></div><div class="space-y-2"><h3 class="text-lg font-bold text-white group-hover:text-sky-300">${escapeHtml(product.title)}</h3><p class="text-sm text-slate-400 leading-relaxed">${escapeHtml(product.description)}</p></div></div><div class="pt-6 mt-6 border-t border-borderSubtle space-y-3"><div class="flex items-center justify-between text-xs font-mono text-slate-400"><span>Format</span><span class="text-slate-200">${escapeHtml(product.format)}</span></div><div class="flex items-center gap-2.5"><button type="button" data-preview-id="${escapeHtml(product.id)}" class="preview-btn px-3 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 text-xs sm:text-sm font-medium border border-borderSubtle">Preview</button><a href="${escapeHtml(product.buyUrl)}" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-sky-400 hover:bg-sky-300 text-slate-950 text-xs sm:text-sm font-semibold">Buy on Gumroad <span aria-hidden="true">↗</span></a></div></div></article>`).join('');
+      grid.querySelectorAll('.preview-btn').forEach(button => button.addEventListener('click', () => { const product = PRODUCTS_DATA.find(item => item.id === button.dataset.previewId); if (product) openProductModal(product); }));
+    }
+    const modal = document.getElementById('product-modal');
+    function openProductModal(product) {
+      document.getElementById('modal-category').textContent = product.categoryLabel;
+      document.getElementById('modal-format').textContent = product.format;
+      document.getElementById('modal-title').textContent = product.title;
+      document.getElementById('modal-description').textContent = product.description;
+      document.getElementById('modal-price').textContent = product.price;
+      document.getElementById('modal-external-link').href = product.buyUrl;
+      document.getElementById('modal-paypal-link').href = PAYPAL_CHECKOUT_URL;
+      const preview = document.getElementById('modal-preview-box');
+      if (product.previewType === 'code') preview.innerHTML = `<pre class="text-sky-300 leading-relaxed"><code>${escapeHtml(product.previewContent)}</code></pre>`;
+      else if (product.previewType === 'outline') preview.innerHTML = `<div class="space-y-2 text-slate-200"><div class="text-[11px] uppercase tracking-wider text-indigo-400">Sample Contents Outline</div>${product.previewContent.map(line => `<div class="py-1 px-2.5 rounded bg-surface border border-borderSubtle">${escapeHtml(line)}</div>`).join('')}</div>`;
+      else preview.innerHTML = `<div class="space-y-3"><div class="text-[11px] uppercase tracking-wider text-sky-400">${escapeHtml(product.previewContent.label)}</div><div class="flex flex-wrap gap-2">${product.previewContent.pills.map(pill => `<span class="px-2.5 py-1 rounded-md bg-surface text-slate-200 border border-borderSubtle">${escapeHtml(pill)}</span>`).join('')}</div><p class="font-sans text-xs text-slate-400">${escapeHtml(product.previewContent.caption)}</p></div>`;
+      document.getElementById('modal-features').innerHTML = product.features.map(feature => `<li class="flex items-start gap-2.5"><span class="text-emerald-400" aria-hidden="true">✓</span><span>${escapeHtml(feature)}</span></li>`).join('');
+      modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden'; document.getElementById('close-modal-btn').focus();
+    }
+    function closeProductModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = ''; }
+    document.getElementById('close-modal-btn').addEventListener('click', closeProductModal);
+    document.getElementById('modal-backdrop').addEventListener('click', closeProductModal);
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeProductModal(); });
+    document.getElementById('notify-form').addEventListener('submit', event => {
+      event.preventDefault(); const input = document.getElementById('email-input'); const feedback = document.getElementById('form-feedback');
+      feedback.className = 'max-w-lg mx-auto rounded-xl px-4 py-3 text-sm font-medium border';
+      if (!input.validity.valid) { feedback.textContent = 'Please enter a valid email address.'; feedback.classList.add('bg-rose-500/10','text-rose-300','border-rose-500/30'); input.focus(); return; }
+      feedback.textContent = 'Thanks! This preview form is not connected to a mailing list yet.'; feedback.classList.add('bg-emerald-500/10','text-emerald-300','border-emerald-500/30');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderLinks(); renderFilterTabs(); renderProducts();
+  </script>
+</body>
+</html>
